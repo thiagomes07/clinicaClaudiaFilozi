@@ -5,26 +5,342 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Descrição da sua landing page"> <!-- Fazer a descrição da página -->
-    <link rel="stylesheet" href="styles/styles.css"> <!-- Arquivo CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Biblioteca de animações -->
+    <link rel="stylesheet" href="styles/styles.css"> 
+    <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/c35ca0d4c2.js" crossorigin="anonymous"></script>
+    <!-- Biblioteca de Ícones -->
+    <script src="https://unpkg.com/scrollreveal"></script> <!-- Biblioteca de animações de surgimento de elementos -->
     <title>Clínica Claudia Filozi</title>
 </head>
 
 <body>
-    <header>
-        <!-- Seu cabeçalho aqui -->
-    </header>
-
     <main>
-        <!-- Conteúdo principal da landing page -->
+        <header>
+            <div id="logo">
+                <img src="images/smallLogo.png" alt="Logotipo da Clínica">
+                <h1>Claudia <br> Filozi</h1>
+            </div>
+
+            <i class="fa-solid fa-bars" alt="Botão para abrir menu"></i>
+            <nav>
+                <ul>
+                    <li><a href="#services">Procedimentos</a></li>
+                    <li><a href="#aboutUs">Sobre nós</a></li>
+                    <li><a href="#adress">Endereço</a></li>
+                    <li><a href="#contactUs">Contato</a></li>
+                    <li><i class="fa-solid fa-xmark" alt="Botão para fechar menu"></i></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="home">
+            <div id="leftDiv">
+                <h1>Limpeza de Pele </h1>
+                <img src="/images/faceCleasing.jpg"
+                    alt="Imagens alteradas dinâmicamente sobre os serviços oferecidos pela clínica">
+                <!-- Carrossel de fotos dos serviços prestados pela clínica -->
+            </div>
+            <div id="rightDiv">
+                <img src="images/bigLogo.png" alt="Logotipo da Clínica">
+                <h1>Claudia Filozi</h1>
+                <h2>Clínica de saúde, estética e bem-estar</h2>
+            </div>
+        </div>
     </main>
 
-    <section id="aboutUs">
+    <section id="services">
+        <div>
+            <h1 class="sectionTitle">Nossos Procedimentos</h1>
+        </div>
+        <div>
+            <div class="service">
+                <div>
+                    <div>
+                        <img src="images/faceCleasingSmall.jpg" alt="Limpeza de pele">
+                        <a href="https://api.whatsapp.com/send?phone=5511934107391&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Limpeza%20de%20Pele."
+                            target="_blank" title="Enviar mensagem ao WhatsApp"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <h1>Limpeza de Pele</h1>
+                </div>
+                <p>
+                    Experimente nossa limpeza facial e tenha uma pele radiante. Removemos oleosidade e impurezas,
+                    deixando-a
+                    renovada.</p>
+                <a href="https://api.whatsapp.com/send?phone=5511934107391&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Limpeza%20de%20Pele."
+                    target="_blank">Agende uma Sessão</a>
+            </div>
+            <div class="service">
+                <div>
+                    <div>
+                        <img src="images/laserHairRemovalSmall.jpg" alt="Depilação a Laser">
+                        <a href="https://api.whatsapp.com/send?phone=5511934107391&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Depila%C3%A7%C3%A3o%20a%20Laser."
+                            target="_blank" title="Enviar mensagem ao WhatsApp"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <h1>Depilação a Laser</h1>
+                </div>
+                <p>
+                    Elimine pelos indesejados com segurança. Desfrute de uma pele suave e duradoura e sinta a liberdade.
+                </p>
+                <a href="https://api.whatsapp.com/send?phone=5511934107391&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Depila%C3%A7%C3%A3o%20a%20Laser."
+                    target="_blank">Agende uma Sessão</a>
+            </div>
+            <div class="service">
+                <div>
+                    <div>
+                        <img src="images/relaxationMassageSmall.jpg" alt="Massagem">
+                        <a href="https://api.whatsapp.com/send?phone=5511934107391&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Massagem."
+                            target="_blank" title="Enviar mensagem ao WhatsApp"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <h1>Massagem</h1>
+                </div>
+                <p>Relaxe e revitalize seu corpo e mente com nossas massagens modeladora e relaxante. Contorne seu corpo
+                    e alivie o estresse. </p>
+                <a href="https://api.whatsapp.com/send?phone=5511934107391&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Massagem."
+                    target="_blank">Agende uma Sessão</a>
+            </div>
+            <div class="service">
+                <div>
+                    <div>
+                        <img src="images/acupunctureSmall.jpg" alt="Acupuntura">
+                        <a href="https://api.whatsapp.com/send?phone=5511934107391&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Acupuntura."
+                            target="_blank" title="Enviar mensagem ao WhatsApp"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <h1>Acupuntura</h1>
+                </div>
+                <p>Descubra o poder da acupuntura: alívio de dores e bem-estar em um só tratamento. Experimente e
+                    transforme-se</p>
+                <a href="https://api.whatsapp.com/send?phone=5511934107391&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Acupuntura."
+                    target="_blank">Agende uma Sessão</a>
+            </div>
+            <div class="service">
+                <div>
+                    <div>
+                        <img src="images/PilatesSmall.jpg" alt="Pilates">
+                        <a href="https://api.whatsapp.com/send?phone=5511934107391&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Pilates."
+                            target="_blank" title="Enviar mensagem ao WhatsApp"><i class="fa-brands fa-whatsapp"></i>
+                    </div></a>
+                    <h1>Pilates</h1>
+                </div>
+                <p>Fortaleça corpo e mente com o Pilates. Melhore a postura, flexibilidade e encontre equilíbrio,
+                    bem-estar e
+                    vitalidade.</p>
+                <a href="https://api.whatsapp.com/send?phone=5511934107391&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Pilates."
+                    target="_blank">Agende uma Sessão</a>
+            </div>
+            <div class="service">
+                <div>
+                    <div>
+                        <img src="images/lymphaticDrainage.jpg" alt="Drenagem Linfática">
+                        <a href="https://api.whatsapp.com/send?phone=5511934107391&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Drenagem%20Linf%C3%A1tica."
+                            target="_blank" title="Enviar mensagem ao WhatsApp"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <h1>Drenagem Linfática</h1>
+                </div>
+                <p>Redescubra seu equilíbrio e vitalidade com a drenagem linfática. Elimine toxinas, reduza o inchaço e
+                    melhore a circulação. </p>
+                <a href="https://api.whatsapp.com/send?phone=5511934107391&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Drenagem%20Linf%C3%A1tica."
+                    target="_blank">Agende uma Sessão</a>
+            </div>
+            <div class="service">
+                <div>
+                    <div>
+                        <img src="images/post-operativeFacialDrainagel.jpg" alt="Drenagem Pós Operatória Facial">
+                        <a href="https://api.whatsapp.com/send?phone=5511934107391&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Drenagem%20P%C3%B3s%20Operat%C3%B3ria."
+                            target="_blank" title="Enviar mensagem ao WhatsApp"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <h1>Drenagem Pós Operatória</h1>
+                </div>
+                <p>Potencialize sua recuperação pós-operatória com a drenagem linfática corporal e facial oferecida em
+                    nossa clínica. </p>
+                <a href="https://api.whatsapp.com/send?phone=5511934107391&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Drenagem%20P%C3%B3s%20Operat%C3%B3ria."
+                    target="_blank">Agende uma Sessão</a>
+            </div>
 
+            <div class="service">
+                <div>
+                    <div>
+                        <img src="images/pelvicFloorExercises.jpg" alt="Fortalecimento do Assoalho Pélvico">
+                        <a href="https://api.whatsapp.com/send?phone=5511934107391&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Fortalecimento%20P%C3%A9lvico."
+                            target="_blank" title="Enviar mensagem ao WhatsApp"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <h1>Fortalecimento Pélvico</h1>
+                </div>
+                <p>Fortaleça seu assoalho pélvico, para homens e mulheres, em nossa clínica. Previna
+                    problemas e potencialize sua saúde íntima.</p>
+                <a href="https://api.whatsapp.com/send?phone=5511934107391&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Fortalecimento%20P%C3%A9lvico."
+                    target="_blank">Agende uma Sessão</a>
+            </div>
+            <div class="service">
+                <div>
+                    <div>
+                        <img src="images/auriculotherapy.jpg" alt="Auriculoterapia">
+                        <a href="https://api.whatsapp.com/send?phone=5511934107391&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Auriculoterapia."
+                            target="_blank" title="Enviar mensagem ao WhatsApp"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <h1>Auriculoterapia</h1>
+                </div>
+                <p>
+                    Descubra a auriculoterapia: estímulos específicos na orelha aliviam dores, reduzem o estresse e
+                    promovem equilíbrio energético.</p>
+                <a href="https://api.whatsapp.com/send?phone=5511934107391&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Auriculoterapia."
+                    target="_blank">Agende uma Sessão</a>
+            </div>
+            <div class="service">
+                <div>
+                    <div>
+                        <img src="images/othersSmall.jpg" alt="Mulher feliz cuidando da saúde">
+                        <a
+                            href="https://api.whatsapp.com/send?phone=5511934107391&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20sess%C3%A3o"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <h1>Outros Procedimentos</h1>
+                </div>
+                <ul>
+                    <li>Drenagem em Gestantes</li>
+                    <li>Drenagem Facial</li>
+                    <li>Carboxterapia</li>
+                </ul>
+                <a href="https://api.whatsapp.com/send?phone=5511934107391&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20sess%C3%A3o"
+                    target="_blank">Agende uma Sessão</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="aboutUs">
+        <div>
+            <h1 class="sectionTitle">Quem Somos</h1>
+        </div>
+        <div>
+            <div id="aboutLeft">
+                <div id="slide">
+                    <div id="images">
+                        <div id="back" class="btn"><i class="fa-solid fa-chevron-left"></i></div>
+                        <div id="next" class="btn"><i class="fa-solid fa-chevron-right"></i></div>
+                        <img class="img" id="imgSelected" src="images/clinicFront.jpg" alt="Fachada da clínica">
+                        <img class="img" src="images/clinicBottom.jpg" alt="Térreio da clínica">
+                        <img class="img" src="images/clinicTop.jpg" alt="Primeiro andar da clínica">
+                    </div>
+                    <div id="balls">
+                    </div>
+                </div>
+                <div>
+                    <img src="images/mediumLogo.png" alt="">
+                    <div>
+                        <h1>Clínica claudia Filozi</h1>
+                        <p>Saúde, beleza e bem-estar num só lugar!</p>
+                    </div>
+                </div>
+            </div>
+            <div id="aboutRight">
+                <div>
+                    <p>Bem-vindo(a) à nossa clínica de saúde, beleza e bem-estar, um refúgio tranquilo onde você
+                        encontrará equilíbrio e cuidado para o seu corpo e mente. Com uma atmosfera acolhedora e uma
+                        energia positiva, nossa clínica tem sido um ponto de transformação na vida de centenas de
+                        pacientes ao longo dos últimos 10 anos.</p>
+                    <p>Nossa equipe é liderada por uma doutora altamente experiente, dedicada a oferecer tratamentos
+                        personalizados e resultados excepcionais. Combinando conhecimentos médicos avançados e uma
+                        abordagem holística, nossa doutora e têm o compromisso de proporcionar o mais alto nível de
+                        atendimento aos nossos pacientes.</p>
+                    <p>Na clínica, buscamos criar um ambiente harmonioso, onde você se sinta acolhido(a) e apoiado(a) em
+                        sua jornada de saúde e bem-estar. Estamos ansiosos para recebê-lo(a) e fazer parte da sua
+                        transformação. Agende sua consulta e permita que nossa clínica melhore sua vida, assim como fez
+                        por tantas outras pessoas.</p>
+                </div>
+                <div id="videoContainer">
+                    <video src="images/clinicTour.mp4" autoplay muted loop controls></video>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <img src="images/claudiaFace.jpg" alt="Rosto da doutora Claudia">
+            </div>
+            <div>
+                <h1>Doutora Claudia Filozi</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequatur exercitationem earum
+                    quas, id tempora deleniti illum assumenda recusandae, debitis animi, molestiae voluptatum eveniet
+                    laboriosam voluptas minus corrupti in minima. Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Modi veritatis ipsam, numquam nisi hic harum autem voluptate molestias officiis odit
+                    distinctio enim molestiae labore consectetur, nulla dolore. Optio, aut ullam.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quis esse amet, repudiandae
+                    rerum quisquam temporibus alias aliquam soluta hic dignissimos ratione nostrum nemo omnis est illum
+                    beatae animi non?</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="adress">
+        <div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.6999799939613!2d-46.85249018255614!3d-23.650913199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cfab3359de870f%3A0xf1c8806cf91903e9!2sCl%C3%ADnica%20Claudia%20Filozi!5e0!3m2!1spt-BR!2sbr!4v1686790290607!5m2!1spt-BR!2sbr"
+                width="600" height="450" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div>
+            <p><i class="fa-solid fa-location-dot"></i>Avenida Elias Yasbek 1335, centro, Embu das Artes </p>
+            <div>
+                <p>Sábado. 08:00 às 16:00</p>
+                <p>Seg á Sex. 07:30 às 19:00</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contactUs">
+        <h1 class="sectionTitle">Contate-nos</h1>
+        <div>
+            <div>
+                <a href="tel:+551142415027" target="_blank" title="Ligar para clínica"><i
+                        class="fa-solid fa-phone"></i></a>
+                <p>(11) 4241-5027 <i class="fa-solid fa-copy"></i>
+                    <span id="numTel" class="boxMessage">
+                        Copiado!
+                    </span>
+                </p>
+            </div><!-- #boxMessage para indicar que o texto foi copiado -->
+            <div>
+                <a href="mailto:clinicaclaudiafilozi@gmail.com?subject=Agendamento de Sessão&body=Ol%C3%A1%2C%20eu%20gostaria%20de%20agendar%20uma%20sess%C3%A3o."
+                    target="_blank" title="Enviar um E-mail"><i class="fa-solid fa-envelope"></i></a>
+                <p>clinicaclaudiafilozi@gmail.com <i class="fa-solid fa-copy"></i>
+                    <span id="email" class="boxMessage">
+                        Copiado!
+                    </span>
+                </p>
+            </div>
+            <div>
+                <a href="https://api.whatsapp.com/send?phone=5511934107391&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20sess%C3%A3o"
+                    target="_blank" title="Enviar uma mensagem no WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <p>(11) 93410-7391 <i class="fa-solid fa-copy"></i>
+                    <span id="numWpp" class="boxMessage">
+                        Copiado!
+                    </span>
+                </p>
+            </div>
+        </div>
+        <p>
+            Agende já uma sessão em nossa clínica e deixe-nos cuidar de você, proporcionando paz, rejuvenescimento e
+            equilíbrio. Transforme sua vida hoje mesmo! Entre em contato conosco.</p>
     </section>
 
     <footer>
-        <!-- Rodapé da página -->
+        <p>por<br><a href="https://thiagomes07.github.io/myPortfolio/" target="_blank"
+                title="Desenvolvedor deste site">Thiago Gomes</a></p>
+        <div>
+            <img src="images/smallerLogo.png" alt="">
+            <p>Clínica Claudia Filozi</p>
+        </div>
     </footer>
+
+    <a href="" id="btnWpp"><i class="fa-brands fa-whatsapp"></i></a> <!-- Ícone fixo do WhatsApp -->
 
     <script src="scripts/script.js"></script> <!-- Arquivo JavaScript -->
 </body>
