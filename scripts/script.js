@@ -52,12 +52,12 @@ ScrollReveal().reveal("section#contactUs > p", {
 /* Troca de imagens da tela Home */
 document.addEventListener("DOMContentLoaded", function () {
   let images = [
-    "../images/laserHairRemoval.jpg",
-    "../images/relaxationMassage.jpg",
-    "../images/acupuncture.jpg",
-    "../images/pilates.jpg",
-    "../images/faceCleasing.jpg",
-    "../images/others.jpg",
+    "images/laserHairRemoval.jpg",
+    "images/relaxationMassage.jpg",
+    "images/acupuncture.jpg",
+    "images/pilates.jpg",
+    "images/faceCleasing.jpg",
+    "images/others.jpg",
   ];
   const texts = [
     "Depilação a Laser",
