@@ -4,67 +4,80 @@
 @font-face {
   font-family: "cocogooseThin";
   src: url("fonts/cocogoose/cocogooseThin.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "cocogooseLight";
   src: url("fonts/cocogoose/cocogooseLight.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "cocogooseRegular";
   src: url("fonts/cocogoose/cocogooseRegular.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "cocogooseSemiBold";
   src: url("fonts/cocogoose/cocogooseSemiBold.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "cocogooseBold";
   src: url("fonts/cocogoose/cocogooseBold.ttf") format("truetype");
+  font-display: swap;
 }
 
 /* Poppins */
 @font-face {
   font-family: "poppinsThin";
   src: url("fonts/poppins/poppinsThin.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "poppinsExtraLight";
   src: url("fonts/poppins/poppinsExtralight.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "poppinsLight";
   src: url("fonts/poppins/poppinsLight.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "poppinsRegular";
   src: url("fonts/poppins/poppinsRegular.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "poppinsSemiBold";
   src: url("fonts/poppins/poppinsSemibold.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "poppinsBold";
   src: url("fonts/poppins/poppinsBold.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "poppinsExtraBold";
   src: url("fonts/poppins/poppinsExtrabold.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "poppinsBlack";
   src: url("fonts/poppins/poppinsBlack.ttf") format("truetype");
+  font-display: swap;
 }
 
 body::-webkit-scrollbar {

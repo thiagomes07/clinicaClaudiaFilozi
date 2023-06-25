@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Descrição da sua landing page"> <!-- Fazer a descrição da página -->
+    <meta name="description" content="Bem-vindo à Clínica Claudia Filozi - uma clínica de saúde, estética e bem-estar. Oferecemos tratamentos personalizados, resultados excepcionais e uma experiência transformadora. Temos uma equipe experiente, ambiente acolhedor e atendimento de alto nível. Agende sua consulta e melhore sua vida agora!"> <!-- Fazer a descrição da página -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- Biblioteca de animações -->
-    <link rel="stylesheet" href="styles/styles.css"> 
+    <link rel="stylesheet" href="styles/styles.css">
     <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/c35ca0d4c2.js" crossorigin="anonymous"></script>
     <!-- Biblioteca de Ícones -->
@@ -284,7 +284,7 @@
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.6999799939613!2d-46.85249018255614!3d-23.650913199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cfab3359de870f%3A0xf1c8806cf91903e9!2sCl%C3%ADnica%20Claudia%20Filozi!5e0!3m2!1spt-BR!2sbr!4v1686790290607!5m2!1spt-BR!2sbr"
                 width="600" height="450" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                referrerpolicy="no-referrer-when-downgrade" title="Localização da clínica pelo Google Maps"></iframe>
         </div>
         <div>
             <p><i class="fa-solid fa-location-dot"></i>Avenida Elias Yasbek 1335, centro, Embu das Artes </p>
@@ -299,7 +299,7 @@
         <h1 class="sectionTitle">Contate-nos</h1>
         <div>
             <div>
-                <a href="tel:+551142415027" target="_blank" title="Ligar para clínica"><i
+                <a href="tel:+551142415027" target="_blank" aria-label="Telefonar à clínica" title="Ligar para clínica"><i
                         class="fa-solid fa-phone"></i></a>
                 <p>(11) 4241-5027 <i class="fa-solid fa-copy"></i>
                     <span id="numTel" class="boxMessage">
@@ -308,8 +308,7 @@
                 </p>
             </div><!-- #boxMessage para indicar que o texto foi copiado -->
             <div>
-                <a href="mailto:clinicaclaudiafilozi@gmail.com?subject=Agendamento de Sessão&body=Ol%C3%A1%2C%20eu%20gostaria%20de%20agendar%20uma%20sess%C3%A3o."
-                    target="_blank" title="Enviar um E-mail"><i class="fa-solid fa-envelope"></i></a>
+                <a href="mailto:clinicaclaudiafilozi@gmail.com?subject=Agendamento de Sessão&body=Ol%C3%A1%2C%20eu%20gostaria%20de%20agendar%20uma%20sess%C3%A3o." target="_blank" aria-label="Enviar um E-mail à clínica." title="Enviar um  E-mail"><i class="fa-solid fa-envelope"></i></a>
                 <p>clinicaclaudiafilozi@gmail.com <i class="fa-solid fa-copy"></i>
                     <span id="email" class="boxMessage">
                         Copiado!
@@ -318,7 +317,7 @@
             </div>
             <div>
                 <a href="https://api.whatsapp.com/send?phone=5511934107391&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20sess%C3%A3o"
-                    target="_blank" title="Enviar uma mensagem no WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    target="_blank" aria-label="Enviar uma mensagem ao WhatsApp da clínica" title="Enviar uma mensagem no WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
                 <p>(11) 93410-7391 <i class="fa-solid fa-copy"></i>
                     <span id="numWpp" class="boxMessage">
                         Copiado!
@@ -340,7 +339,7 @@
         </div>
     </footer>
 
-    <a href="" id="btnWpp"><i class="fa-brands fa-whatsapp"></i></a> <!-- Ícone fixo do WhatsApp -->
+    <a href="(11) 93410-7391" id="btnWpp" target="_blank" aria-label="Entrar em contato com a clínica pelo WhatsApp" title="Enviar uma mensagem pelo WhatsApp"><i class="fa-brands fa-whatsapp"></i></a> <!-- Ícone fixo do WhatsApp -->
 
     <script src="scripts/script.js"></script> <!-- Arquivo JavaScript -->
 </body>

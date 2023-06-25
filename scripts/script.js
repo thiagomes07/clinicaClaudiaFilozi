@@ -10,16 +10,16 @@ ScrollReveal().reveal("div.service", {
 ScrollReveal().reveal("section#aboutUs div#aboutLeft", {
   duration: 2000,
   distance: "100%",
-  delay: 200,
-  origin:'left',
+  delay: 100,
+  origin: "left",
   easing: "ease-in-out",
 });
 
 ScrollReveal().reveal("section#aboutUs div#aboutRight", {
-  duration: 2000,
+  duration: 100,
   distance: "100%",
-  delay: 200,
-  origin:'right',
+  delay: 100,
+  origin: "right",
   easing: "ease-in-out",
 });
 
@@ -29,7 +29,7 @@ ScrollReveal().reveal("section#aboutUs > div:last-of-type", {
   easing: "cubic-bezier(0.5, -0.01, 0, 1.005)",
   interval: 64,
   origin: "bottom",
-  delay: 200,
+  delay: 100,
   viewFactor: 0.32,
 });
 
@@ -52,12 +52,12 @@ ScrollReveal().reveal("section#contactUs > p", {
 /* Troca de imagens da tela Home */
 document.addEventListener("DOMContentLoaded", function () {
   let images = [
-    "/images/laserHairRemoval.jpg",
-    "/images/relaxationMassage.jpg",
-    "/images/acupuncture.jpg",
-    "/images/pilates.jpg",
-    "/images/faceCleasing.jpg",
-    "/images/others.jpg",
+    "../images/laserHairRemoval.jpg",
+    "../images/relaxationMassage.jpg",
+    "../images/acupuncture.jpg",
+    "../images/pilates.jpg",
+    "../images/faceCleasing.jpg",
+    "../images/others.jpg",
   ];
   const texts = [
     "Depilação a Laser",
