@@ -801,7 +801,7 @@ section#adress > div:last-of-type > div:last-of-type p{
 
 /* Contato: */
 section#contactUs {
-  background-image: url("../images/wave-haikei3.svg");
+  background-image: url("../images/backgroundContactUs.svg");
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
