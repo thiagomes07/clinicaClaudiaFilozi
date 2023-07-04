@@ -111,6 +111,7 @@ body {
   background-color: #fffceb;
   color: #111110;
   overflow-x: hidden;
+  width: 100%;
   scrollbar-width: thin;
   scrollbar-color: #ccc transparent;
 }
@@ -118,17 +119,20 @@ body {
 /* Principal: */
 main {
   height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 880px;
 }
 
 /* Cabeçalho: */
 header {
   background-color: #2d9487;
   display: flex;
-  flex-direction: row;
   height: 100px;
-  flex-basis: 10%;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   padding: 0 150px;
@@ -206,25 +210,30 @@ nav > ul > li:last-of-type {
 /* Home: */
 div#home {
   width: 100%;
-  height: calc(100vh - 100px);
+  flex: 1;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   overflow: hidden;
 }
 
 div#leftDiv {
-  flex-basis: 40%;
   position: relative;
+  height: 100%;
+  flex: 3.5;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #555;
   overflow: hidden;
+  z-index: 1;
   margin: -8px;
-  transition: flex-basis 1.5s ease-in-out, background-image 1.5s ease-in-out;
+  clip-path: polygon(0 0, 100% 0, 81% 100%, 0 100%);
+  transition: flex 1.5s ease-in-out;
 }
 
 div#leftDiv:hover {
-  flex-basis: 50%;
+  flex: 4;
 }
 
 div#leftDiv > h1 {
@@ -263,7 +272,9 @@ div#leftDiv > img {
 }
 
 div#rightDiv {
-  flex-basis: 60%;
+  height: 100%;
+  flex: 5;
+  overflow: hidden;
   background-color: #fffceb;
   position: relative;
   display: flex;
@@ -278,7 +289,7 @@ div#rightDiv:before {
   position: absolute;
   top: 0;
   left: -150px;
-  border-bottom: 100vh solid #fffceb;
+  border-bottom: 100% solid #fffceb;
   border-left: 150px solid transparent;
   width: 0;
 }
@@ -303,6 +314,10 @@ section#services {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 section#services > div:first-of-type {
@@ -425,6 +440,115 @@ div.service > ul {
   font-size: 16px;
 }
 
+/* Procedimentos estéticos: */
+section#aesthetics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 696px;
+}
+
+section#aesthetics > div:first-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 25px 0;
+  color: #111110;
+}
+
+section#aesthetics > div:first-of-type > h1 {
+  color: #111110;
+}
+
+section#aesthetics > div:first-of-type > p {
+  color: #111110;
+  font-family: "poppinsRegular";
+  line-height: 22px;
+  font-size: 21px;
+  margin: 10px 20px 0 20px;
+}
+
+section#aesthetics > div:last-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex: 1;
+}
+
+section#aesthetics > div:last-of-type > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  flex: 1;
+  padding: 0 20px;
+  position: relative;
+  transition: flex 1s ease-in-out;
+}
+
+section#aesthetics > div:last-of-type > div:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #fffceb;
+}
+
+section#aesthetics > div:last-of-type > div:hover {
+  flex: 1.2;
+}
+
+section#aesthetics > div:last-of-type > div > img {
+  position: absolute;
+  min-width: 100%;
+  z-index: -1;
+  filter: brightness(0.375);
+}
+
+section#aesthetics > div:last-of-type > div > h1 {
+  font-family: "cocogooseSemiBold";
+  color: #fffceb;
+  pointer-events: none;
+}
+
+section#aesthetics > div:last-of-type > div p {
+  display: none;
+  color: #fffceb;
+  text-align: justify;
+  font-family: "poppinsRegular";
+  text-indent: 20px;
+  line-height: 21px;
+  margin-top: 10px;
+  background-color: #0000002b;
+  border-radius: 5px;
+  max-width: 350px;
+  pointer-events: none;
+  box-shadow: 0 0 10px 10px #0000002b;
+  transition: display 1s ease-in-out;
+}
+
+section#aesthetics > div:last-of-type > div > ul {
+  display: none;
+  pointer-events: none;
+  color: #fffceb;
+  font-family: "poppinsRegular";
+  font-size: 18px;
+  line-height: 25px;
+  list-style-position: inside;
+}
+
+/* Observação:
+  Durante o desenvolvimento da responsividade, quando a largura da tela for menor, esconder os textos e só mostrá-los quando o mouse passar por cima também aumentando a largura da div. Quando a largura for ainda menor, quando o mouse passar por cima esconder também os títulos. E quando for ainda menor, dispôr os elementos verticalmente
+*/
+
 /* Sobre nós: */
 section#aboutUs {
   background-image: url("../images/backgroundAboutUs.svg");
@@ -470,113 +594,6 @@ section#aboutUs div#aboutRight p::selection {
   background-color: #fffceb;
   border-radius: 15px;
   color: #2d9487;
-}
-
-section#aboutUs div#aboutLeft > div:last-of-type {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-}
-
-section#aboutUs div#aboutLeft > div:last-of-type > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-section#aboutUs div#aboutLeft > div:last-of-type h1 {
-  color: #fffceb;
-  font-size: 50px;
-  line-height: 52px;
-  font-family: "poppinsBold";
-}
-
-section#aboutUs div#aboutLeft > div:last-of-type p {
-  color: #fffceb;
-  font-size: 22px;
-  letter-spacing: 1.5px;
-  font-family: "poppinsRegular";
-}
-
-section#aboutUs div#aboutRight {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  flex: 1;
-  height: 100%;
-  visibility: hidden;
-}
-
-section#aboutUs div#aboutRight > div {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 25px;
-  max-width: 1000px;
-}
-
-section#aboutUs div#aboutRight > div > p {
-  text-indent: 50px;
-  text-align: justify;
-  color: #fffceb;
-  font-size: 18px;
-  line-height: 25px;
-  font-family: "poppinsRegular";
-}
-
-section#aboutUs div#aboutRight > div > p:not(p:last-of-type) {
-  margin-bottom: 5px;
-}
-
-section#aboutUs div#aboutRight > div#videoContainer {
-  position: relative;
-  margin-top: 25px;
-  width: 360px;
-  height: 700px;
-}
-
-div#videoContainer::before {
-  content: "";
-  z-index: 0;
-  pointer-events: none;
-  position: absolute;
-  top: 10px;
-  right: 35px;
-  width: 100%;
-  height: calc(100% - 10px);
-  border: 5px solid #fffceb8f;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 20px;
-}
-
-div#videoContainer::after {
-  content: "";
-  z-index: 0;
-  pointer-events: none;
-  position: absolute;
-  top: -5px;
-  left: 50px;
-  width: 100%;
-  height: calc(100% + 25px);
-  border: 3px solid #fffceb;
-  border-radius: 50px 15px 10px 15px;
-}
-
-div#videoContainer video {
-  border-radius: 10px 30px 10px 30px;
-  border: 4px solid #fffceb97;
-  box-shadow: 0 0 20px #fffceba8;
-  z-index: 9;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
 }
 
 /* Slide de Imagens: */
@@ -659,6 +676,110 @@ div#balls div.ballSelected {
   transition: background-color 1.3s ease-in-out;
 }
 
+section#aboutUs div#aboutLeft > div:last-of-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+section#aboutUs div#aboutLeft > div:last-of-type > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section#aboutUs div#aboutLeft > div:last-of-type h1 {
+  color: #fffceb;
+  font-size: 50px;
+  line-height: 52px;
+  font-family: "poppinsBold";
+}
+
+section#aboutUs div#aboutLeft > div:last-of-type p {
+  color: #fffceb;
+  font-size: 22px;
+  letter-spacing: 1.5px;
+  font-family: "poppinsRegular";
+}
+
+section#aboutUs div#aboutRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+  visibility: hidden;
+}
+
+section#aboutUs div#aboutRight > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 25px;
+  max-width: 1000px;
+}
+
+section#aboutUs div#aboutRight > div > p {
+  text-indent: 50px;
+  text-align: justify;
+  color: #fffceb;
+  font-size: 18px;
+  line-height: 25px;
+  font-family: "poppinsRegular";
+}
+
+section#aboutUs div#aboutRight > div > p:not(p:last-of-type) {
+  margin-bottom: 5px;
+}
+
+section#aboutUs div#aboutRight > div#videoContainer {
+  position: relative;
+  margin-top: 25px;
+  height: 700px;
+}
+
+div#videoContainer::before {
+  content: "";
+  z-index: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 10px;
+  right: 35px;
+  width: 100%;
+  height: calc(100% - 10px);
+  border: 5px solid #fffceb8f;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 20px;
+}
+
+div#videoContainer::after {
+  content: "";
+  z-index: 0;
+  pointer-events: none;
+  position: absolute;
+  top: -5px;
+  left: 50px;
+  width: 100%;
+  height: calc(100% + 25px);
+  border: 3px solid #fffceb;
+  border-radius: 50px 15px 10px 15px;
+}
+
+div#videoContainer video {
+  border-radius: 10px 30px 10px 30px;
+  border: 4px solid #fffceb97;
+  box-shadow: 0 0 20px #fffceba8;
+  z-index: 1;
+  height: 100%;
+}
+
 /* Doutora */
 section#aboutUs > div:last-of-type {
   background-image: url("../images/backgroundDoctor.svg");
@@ -700,7 +821,7 @@ section#aboutUs > div:last-of-type > div:last-of-type {
   justify-content: center;
   flex-direction: column;
   height: 100%;
-  width: 530px;
+  width: 600px;
   background-color: #fffcebb3;
   border-radius: 10px;
 }
@@ -783,7 +904,7 @@ section#adress > div > p {
   line-height: 20px;
 }
 
-section#adress > div:last-of-type > div:last-of-type{
+section#adress > div:last-of-type > div:last-of-type {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -792,7 +913,7 @@ section#adress > div:last-of-type > div:last-of-type{
   bottom: 2px;
 }
 
-section#adress > div:last-of-type > div:last-of-type p{
+section#adress > div:last-of-type > div:last-of-type p {
   color: #fffceb;
   font-family: "poppinsRegular";
   font-size: 15px;

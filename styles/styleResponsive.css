@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+@media only screen and (max-width: 1740px) {
+  /* Seção "Quem somos": */
+  div#slide {
+    width: 600px;
+    height: 450px;
+  }
+
+  section#aboutUs div#aboutLeft > div:last-of-type img {
+    height: 130px;
+  }
+
+  section#aboutUs div#aboutLeft > div:last-of-type h1 {
+    font-size: 40px;
+    line-height: 42px;
+  }
+  
+  section#aboutUs div#aboutLeft > div:last-of-type p {
+    font-size: 18px;
+    letter-spacing: 1.1px;
+  }
+
+  section#aboutUs div#aboutRight > div > p {
+    text-indent: 50px;
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  section#aboutUs div#aboutRight > div#videoContainer {
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  /* Seção "Procedimentos Estéticos": */
+  section#aesthetics > div:last-of-type > div:hover {
+    flex: 1.8;
+  }
+}

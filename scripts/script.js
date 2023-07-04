@@ -16,7 +16,7 @@ ScrollReveal().reveal("section#aboutUs div#aboutLeft", {
 });
 
 ScrollReveal().reveal("section#aboutUs div#aboutRight", {
-  duration: 100,
+  duration: 2000,
   distance: "100%",
   delay: 100,
   origin: "right",
@@ -50,7 +50,7 @@ ScrollReveal().reveal("section#contactUs > p", {
 });
 
 /* Troca de imagens da tela Home */
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   let images = [
     "images/laserHairRemoval.jpg",
     "images/relaxationMassage.jpg",
@@ -169,8 +169,86 @@ setInterval(() => {
   }
 }, 5000);
 
+/* Mostrar parágrafo dos procedimentos estéticos: */
+const divAesthetic = document.querySelectorAll(
+  "section#aesthetics > div:last-of-type > div"
+);
+const titleAesthetic = document.querySelectorAll(
+  "section#aesthetics > div:last-of-type > div > h1"
+);
+let isMouseOver = [false, false, false, false, false, false];
+
+divAesthetic.forEach(function (aesthetic, divIndex) {
+  aesthetic.addEventListener("mouseover", () => {
+    isMouseOver[divIndex] = true;
+
+    if (window.innerWidth <= 1350) {
+      /* Esconder os títulos quando a largura for menor que 1350px */
+      titleAesthetic.forEach((title, titleIndex) => {
+        if (divIndex != titleIndex && !isMouseOver[titleIndex]) {
+          title.style.display = "none";
+        }
+      });
+    }
+
+    /* Mostrar os parágrafos */
+    if (divIndex != 5) {
+      setTimeout(() => {
+        if (isMouseOver[divIndex]) {
+          document.querySelector(
+            `section#aesthetics > div:last-of-type > div:nth-of-type(${
+              divIndex + 1
+            }) p`
+          ).style.display = "block";
+        }
+      }, 1000);
+    } else {
+      setTimeout(() => {
+        if (isMouseOver[divIndex]) {
+          document.querySelector(
+            "section#aesthetics > div:last-of-type > div > ul"
+          ).style.display = "block";
+        }
+      }, 1000);
+    }
+  });
+});
+
+divAesthetic.forEach(function (aesthetic, divIndex) {
+  aesthetic.addEventListener("mouseout", () => {
+    isMouseOver[divIndex] = false;
+
+    /* Mosrar com delay os títulos quando a largura for menor que 1350px */
+    if (window.innerWidth <= 1350) {
+      titleAesthetic.forEach((title, titleIndex) => {
+        setTimeout(() => {
+          if (isMouseOver.every((el) => el === false)) {
+            title.style.display = "block";
+          } else if (isMouseOver[titleIndex]) {
+            title.style.display = "block";
+          }
+        }, 1000);
+      });
+    }
+
+    if (divIndex != 5) {
+      document.querySelector(
+        `section#aesthetics > div:last-of-type > div:nth-of-type(${
+          divIndex + 1
+        }) p`
+      ).style.display = "none";
+    } else {
+      document.querySelector(
+        "section#aesthetics > div:last-of-type > div > ul"
+      ).style.display = "none";
+    }
+  });
+});
+
 /* Função de cópia de texto: */
-var icons = document.querySelectorAll("section#contactUs > div > div > p > i");
+const icons = document.querySelectorAll(
+  "section#contactUs > div > div > p > i"
+);
 
 icons.forEach(function (icon, index) {
   icon.addEventListener("click", () => {
