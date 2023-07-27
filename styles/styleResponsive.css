@@ -1,40 +1,1515 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: "cocogooseBold";
+  src: url("fonts/cocogoose/cocogooseBold.ttf") format("truetype");
+  font-display: swap;
+}
+
 @media only screen and (max-width: 1740px) {
   /* Seção "Quem somos": */
+  section#aboutUs {
+    padding: 35px 80px 25px 80px;
+  }
+
   div#slide {
     width: 600px;
     height: 450px;
   }
 
-  section#aboutUs div#aboutLeft > div:last-of-type img {
-    height: 130px;
+  section#aboutUs div#aboutLogo h1 {
+    font-size: 35px;
+    line-height: 52px;
   }
 
-  section#aboutUs div#aboutLeft > div:last-of-type h1 {
-    font-size: 40px;
-    line-height: 42px;
-  }
-  
-  section#aboutUs div#aboutLeft > div:last-of-type p {
-    font-size: 18px;
-    letter-spacing: 1.1px;
+  section#aboutUs div#aboutLogo p {
+    font-size: 17px;
   }
 
-  section#aboutUs div#aboutRight > div > p {
-    text-indent: 50px;
-    font-size: 16px;
-    line-height: 23px;
+  section#aboutUs > div#aboutBottom {
+    height: 650px;
   }
 
-  section#aboutUs div#aboutRight > div#videoContainer {
-    height: 500px;
+  section#aboutUs > div#aboutBottom div#videoContainer {
+    height: 550px;
+    width: 316px;
+    margin-right: 0;
+  }
+
+  div#videoContainer::before {
+    top: 10px;
+    right: 15px;
+    width: 100%;
+    height: calc(100% - 10px);
+  }
+
+  div#videoContainer::after {
+    top: -15px;
+    left: 10px;
+    width: 100%;
+    height: calc(100% + 40px);
+  }
+
+  /* Doutora: */
+  section#aboutUs > div#aboutDoctor > div:first-of-type {
+    margin-right: 100px;
   }
 }
 
 @media only screen and (max-width: 1350px) {
-  /* Seção "Procedimentos Estéticos": */
+  /* Principal: */
+  main {
+    min-height: 680px;
+    max-height: 1200px;
+  }
+
+  /* Cabeçalho: */
+  header {
+    padding: 0 80px;
+    height: 80px;
+  }
+
+  div#logoHeader > img {
+    height: 65px;
+  }
+
+  div#logoHeader > h1 {
+    line-height: 25px;
+    font-size: 22px;
+  }
+
+  nav > ul > li > a {
+    font-size: 21px;
+  }
+
+  /* Home */
+  div#rightDiv > img {
+    width: 400px;
+  }
+
+  div#rightDiv > h1 {
+    font-size: 75px;
+  }
+
+  div#rightDiv > h2 {
+    font-size: 26px;
+  }
+
+  div#leftDiv > h1 {
+    font-size: 26px;
+  }
+
+  /* Procedimentos Estéticos: */
   section#aesthetics > div:last-of-type > div:hover {
     flex: 1.8;
+  }
+
+  section#aesthetics > div:last-of-type > div > h1 {
+    font-size: 19px;
+  }
+
+  /* Quem somos: */
+  section#aboutUs {
+    padding: 35px 40px 25px 40px;
+  }
+
+  section#aboutUs div#aboutLogo {
+    flex-direction: column;
+  }
+
+  /* Doutora: */
+  section#aboutUs > div#aboutDoctor > div:first-of-type {
+    margin-right: 80px;
+    height: 550px;
+    width: 375px;
+  }
+
+  section#aboutUs > div#aboutDoctor > div:last-of-type {
+    max-width: 480px;
+  }
+
+  section#aboutUs > div#aboutDoctor > div:last-of-type > h1 {
+    font-size: 35px;
+  }
+
+  section#aboutUs > div#aboutDoctor > div:last-of-type > p {
+    text-indent: 30px;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  /* Endereço: */
+  section#adress > div:last-of-type {
+    width: 570px;
+    height: 60px;
+    justify-content: space-between;
+    padding: 7px 0;
+    top: unset;
+    bottom: -3px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #fffceb;
+    border-top: 3px solid #2d9487;
+    border-left: 3px solid #2d9487;
+    border-right: 3px solid #2d9487;
+  }
+
+  section#adress > div > p > i {
+    color: #2d9487;
+  }
+
+  section#adress > div > p {
+    color: #2d9487;
+  }
+
+  section#adress > div:last-of-type > div:last-of-type {
+    position: unset;
+    bottom: unset;
+  }
+
+  section#adress > div:last-of-type > div:last-of-type p {
+    color: #2d9487;
+  }
+
+  /* Contate-nos: */
+  section#contactUs {
+    border-top: 3px solid #2d9487;
+  }
+
+  section#contactUs > div > div {
+    margin: 0;
+    padding: 30px;
+  }
+
+  section#contactUs > div > div a {
+    width: 70px;
+    height: 70px;
+    font-size: 27px;
+  }
+
+  section#contactUs > div > div p {
+    font-size: 23px;
+  }
+
+  section#contactUs > div > div p > i {
+    font-size: 20px;
+  }
+
+  section#contactUs > p {
+    font-size: 17px;
+  }
+
+  span.boxMessage {
+    height: 24px;
+    border-radius: 4px;
+    width: 80px;
+    right: -65px;
+    bottom: 25px;
+    font-size: 15px;
+  }
+
+  /* Ícone fixo: */
+  a#btnWpp {
+    width: 60px;
+    height: 60px;
+    font-size: 34px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  /* Principal: */
+  main {
+    min-height: 480px;
+  }
+
+  /* Cabeçalho: */
+  header {
+    padding: 0 60px;
+  }
+
+  nav > ul > li > a {
+    font-size: 21px;
+  }
+
+  nav > ul > li:not(li:nth-child(4)) {
+    margin-right: 25px;
+  }
+
+  /* Home: */
+  div#leftDiv > h1 {
+    font-size: 22px;
+  }
+
+  div#rightDiv > img {
+    width: 250px;
+  }
+
+  div#rightDiv > h1 {
+    font-size: 59px;
+    margin-top: 15px;
+  }
+
+  div#rightDiv > h2 {
+    font-size: 20px;
+  }
+
+  /* Procedimentos: */
+  div.service {
+    width: 274px;
+    height: 320px;
+    margin: 15px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  div.service > div > div {
+    height: 170px;
+  }
+
+  div.service > div > div > img {
+    height: 100%;
+    min-width: 100%;
+  }
+
+  div.service > div > h1 {
+    font-size: 19px;
+    padding-bottom: 0;
+    line-height: 20px;
+  }
+
+  div.service > p {
+    padding: 0 7px;
+    font-size: 15px;
+    line-height: 17px;
+  }
+
+  div.service > a {
+    height: 40px;
+    font-size: 17.5px;
+  }
+
+  /* Procedimentos estéticos: */
+  section#aesthetics > div:last-of-type > div > h1 {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-align: right;
+    letter-spacing: -8px;
+    transition: 1s ease-in-out;
+  }
+
+  section#aesthetics > div:last-of-type > div:nth-of-type(5) h1 {
+    text-align: left;
+  }
+
+  section#aesthetics > div:last-of-type > div:hover h1 {
+    font-size: 20px;
+    letter-spacing: unset;
+    text-align: unset;
+    text-transform: unset;
+    text-orientation: unset;
+    writing-mode: unset;
+  }
+
+  section#aesthetics > div:last-of-type > div:hover {
+    flex: 5;
+  }
+
+  /* Quem somos: */
+  div#slide {
+    width: 500px;
+    height: 375px;
+    border-radius: 20px 0 20px 0;
+    border-width: 5px;
+  }
+
+  div.btn {
+    width: 50px;
+    font-size: 2em;
+  }
+
+  div#balls {
+    bottom: 10px;
+  }
+
+  div#balls div {
+    border: 2.5px solid #fffceb;
+    box-shadow: 0px 0px 10px #000000cf;
+    width: 28px;
+    height: 10px;
+  }
+
+  section#aboutUs img#cornerBottom,
+  section#aboutUs img#cornerTop {
+    width: 100px;
+  }
+
+  section#aboutUs div#aboutLogo h1 {
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  section#aboutUs div#aboutLogo p {
+    font-size: 15.5px;
+    letter-spacing: unset;
+  }
+
+  section#aboutUs div#aboutTxt {
+    padding: 0 30px;
+  }
+
+  section#aboutUs div#aboutTxt > p {
+    text-indent: 30px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  section#aboutUs > div#aboutBottom div#videoContainer {
+    height: 480px;
+    width: 273px;
+  }
+
+  div#videoContainer::before {
+    top: 10px;
+    right: 60px;
+    width: 80%;
+    height: calc(100% - 10px);
+  }
+
+  div#videoContainer::after {
+    top: -10px;
+    left: 35px;
+    width: 90%;
+    height: calc(100% + 25px);
+  }
+
+  /* Doutora: */
+  section#aboutUs > div#aboutDoctor {
+    justify-content: space-between;
+    padding: 0 30px 0 40px;
+  }
+
+  section#aboutUs > div#aboutDoctor > div:first-of-type {
+    margin-right: unset;
+  }
+
+  section#aboutUs > div#aboutDoctor > div:last-of-type {
+    padding-left: 30px;
+    max-width: unset;
+    flex: 1;
+  }
+
+  section#aboutUs > div#aboutDoctor > div:last-of-type > h1 {
+    font-size: 32px;
+    line-height: 28px;
+    margin-bottom: 5px;
+  }
+
+  section#aboutUs > div#aboutDoctor > div:last-of-type > p {
+    font-size: 17px;
+    line-height: 18px;
+  }
+
+  /* Contate-nos: */
+  section#contactUs > div > div {
+    margin: 0;
+    padding: 25px;
+  }
+
+  section#contactUs > div > div a {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+
+  section#contactUs > div > div p {
+    font-size: 19px;
+  }
+
+  section#contactUs > div > div p > i {
+    font-size: 17px;
+  }
+
+  section#contactUs > p {
+    font-family: "poppinsRegular";
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  h1.sectionTitle {
+    font-size: 40px;
+  }
+
+  /* Cabeçalho: */
+  header {
+    padding: 0 40px;
+  }
+
+  nav > ul > li > a {
+    font-size: 18.5px;
+  }
+
+  nav > ul > li:not(li:nth-child(4)) {
+    margin-right: 20px;
+  }
+
+  /* Procedimentos estéticos: */
+  section#aesthetics > div:first-of-type {
+    margin: 15px 0;
+  }
+
+  /* Quem somos: */
+  section#aboutUs {
+    padding: 20px 40px 25px 40px;
+  }
+
+  section#aboutUs > div:first-of-type {
+    margin-bottom: 20px;
+  }
+
+  div#slide {
+    width: 430px;
+    height: 337px;
+  }
+
+  section#aboutUs div#aboutLogo img {
+    width: 120px;
+  }
+
+  section#aboutUs div#aboutLogo h1 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  section#aboutUs div#aboutLogo p {
+    font-size: 13px;
+  }
+
+  section#aboutUs > div#aboutBottom {
+    height: 550px;
+  }
+
+  section#aboutUs div#aboutTxt {
+    padding: 0 30px 0 5px;
+  }
+
+  section#aboutUs img#cornerBottom,
+  section#aboutUs img#cornerTop {
+    width: 60px;
+  }
+
+  /* Doutora: */
+  section#aboutUs > div#aboutDoctor {
+    padding: 0 15px 0 0;
+    margin-left: 20px;
+  }
+
+  section#aboutUs > div#aboutDoctor > div:first-of-type {
+    margin-left: -20px;
+    width: 360px;
+  }
+
+  section#aboutUs > div#aboutDoctor > div:last-of-type {
+    padding-left: 30px;
+    max-width: unset;
+    flex: 1;
+    background-color: #fffceb65;
+  }
+
+  section#aboutUs > div#aboutDoctor > div:last-of-type > h1 {
+    font-size: 28px;
+    line-height: 28px;
+    margin-bottom: 5px;
+  }
+
+  section#aboutUs > div#aboutDoctor > div:last-of-type > p {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  /* Contate-nos: */
+  section#contactUs {
+    padding: 15px 0 5px 0;
+  }
+
+  section#contactUs > p {
+    font-size: 16px;
+    margin: 0 15px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  /* Principal: */
+  main {
+    min-height: 850px;
+  }
+
+  /* Cabeçalho: */
+  nav {
+    position: relative;
+  }
+
+  nav ul {
+    background-color: #2d9487;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: -200px;
+    height: 200px;
+    display: flex;
+    width: 100%;
+    z-index: 4;
+    transition: top 0.5s ease-in-out;
+  }
+
+  nav > ul > li:not(li:nth-child(4)) {
+    margin-right: unset;
+  }
+
+  nav > ul > li:not(li:last-of-type) > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  nav > ul > li > a:hover::after {
+    width: unset;
+  }
+
+  nav > ul > li:not(li:last-of-type) {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+  }
+
+  nav > ul > li:not(li:last-of-type)::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #fffceb;
+    height: 1px;
+    width: 100%;
+  }
+
+  nav > ul > li:last-of-type {
+    margin-right: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1px;
+    right: 23px;
+  }
+
+  nav > ul > li:last-of-type > i.fa-xmark {
+    cursor: pointer;
+    font-size: 38px;
+  }
+
+  header > div#openMenuBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    background-color: #2d9486c8;
+    z-index: 3;
+    top: 13px;
+    right: 40px;
+    border-radius: 5px;
+    position: fixed;
+  }
+
+  header > div#openMenuBtn > i.fa-bars {
+    cursor: pointer;
+    font-size: 35px;
+    color: #fffceb;
+  }
+
+  /* Home: */
+  div#home {
+    flex-direction: column;
+  }
+
+  div#leftDiv {
+    z-index: unset;
+    height: unset;
+    width: 100%;
+    flex: 5;
+    clip-path: polygon(0 0, 100% 0%, 100% 73%, 0% 100%);
+  }
+
+  div#leftDiv:hover {
+    flex: 5;
+  }
+
+  div#leftDiv > h1 {
+    font-size: 25px;
+  }
+
+  div#rightDiv {
+    height: unset;
+    width: 100%;
+    flex: 5;
+    padding: 15px 0 30px 0;
+  }
+
+  /* Nossos procedimentos: */
+  div.service > div > div > a {
+    opacity: 1;
+    display: none;
+  }
+
+  div.service > div > div:hover img {
+    transform: none;
+    filter: none;
+  }
+
+  /* Procedimentos estéticos: */
+  section#aesthetics {
+    height: unset;
+  }
+
+  section#aesthetics > div:last-of-type {
+    flex-direction: column;
+    height: 900px;
+    flex: unset;
+  }
+
+  section#aesthetics > div:last-of-type > div {
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    height: unset;
+    flex: 1;
+    padding: unset;
+  }
+
+  section#aesthetics > div:last-of-type > div:not(:last-child)::before {
+    top: unset;
+    right: unset;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+  }
+
+  section#aesthetics > div:last-of-type > div:hover {
+    flex: 1;
+  }
+
+  section#aesthetics > div:last-of-type > div > h1 {
+    writing-mode: unset;
+    text-orientation: unset;
+    text-transform: unset;
+    text-align: unset;
+    letter-spacing: unset;
+    font-size: 22px;
+    margin-left: 45px;
+  }
+
+  section#aesthetics > div:last-of-type > div:hover h1 {
+    font-size: 22px;
+  }
+
+  section#aesthetics > div:last-of-type > div p {
+    display: block;
+    margin-top: unset;
+    max-width: 450px;
+    margin-right: 45px;
+    margin-left: 20px;
+  }
+
+  section#aesthetics > div:last-of-type > div:last-of-type > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    margin-left: 20px;
+    margin-right: 45px;
+  }
+
+  section#aesthetics > div:last-of-type > div ul {
+    display: block;
+  }
+
+  /* Quem somos: */
+  section#aboutUs {
+    background-image: url("../images/backgroundAboutUsSmall.svg");
+  }
+
+  div.btn:hover {
+    transform: unset;
+  }
+  div#balls div:hover {
+    transform: unset;
+  }
+
+  section#aboutUs > div#aboutTop {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  section#aboutUs img#cornerTop {
+    right: unset;
+    top: unset;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    transform: rotate(-90deg);
+  }
+
+  section#aboutUs > div#aboutTop > div#slide {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  section#aboutUs div#aboutTxt {
+    padding: unset;
+  }
+
+  section#aboutUs > div#aboutBottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: unset;
+  }
+
+  section#aboutUs > div#aboutBottom div#newDiv1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section#aboutUs div#aboutLogo {
+    margin-right: 50px;
+  }
+
+  section#aboutUs div#aboutLogo img {
+    width: 80px;
+  }
+
+  section#aboutUs div#aboutLogo h1 {
+    color: #fffceb;
+    font-size: 27px;
+    line-height: 27px;
+    letter-spacing: -8px;
+    text-transform: uppercase;
+    font-family: "cocogooseBold";
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+  }
+
+  section#aboutUs > div#aboutBottom div#videoContainer {
+    height: 525px;
+    width: 269px;
+  }
+
+  div#videoContainer::before {
+    top: 10px;
+    right: 70px;
+    width: 80%;
+    height: calc(100% - 10px);
+  }
+
+  div#videoContainer::after {
+    top: -15px;
+    left: 30px;
+    width: 100%;
+    height: calc(100% + 35px);
+  }
+
+  section#aboutUs > div#aboutBottom div#newDiv2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    margin-top: 10px;
+  }
+
+  section#aboutUs p#logoParagraph {
+    font-size: 20px;
+    font-family: "poppinsRegular";
+    color: #fffceb;
+    letter-spacing: 1px;
+  }
+
+  section#aboutUs img#cornerBottom {
+    width: 100px;
+  }
+
+  /* Doutora: */
+  section#aboutUs > div#aboutDoctor {
+    height: 850px;
+    padding: 0 50px;
+    flex-direction: column;
+    margin: unset;
+    margin-top: 50px;
+  }
+
+  section#aboutUs > div#aboutDoctor > div:first-of-type {
+    height: 500px;
+    width: 345px;
+    border-radius: 15px;
+    margin-top: -40px;
+  }
+
+  section#aboutUs > div#aboutDoctor > div:last-of-type {
+    flex-direction: column;
+    height: unset;
+    padding: unset;
+  }
+
+  section#aboutUs > div#aboutDoctor > div:last-of-type > h1 {
+    font-size: 35px;
+    margin-bottom: 8px;
+  }
+
+  /* Endereço: */
+  section#adress > div:last-of-type {
+    width: 450px;
+    height: 50px;
+    padding: 5px 0;
+  }
+
+  section#adress > div > p > i {
+    font-size: 16px;
+    margin-right: 3px;
+  }
+
+  section#adress > div > p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  section#adress > div:last-of-type > div:last-of-type p {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  /* Contate-nos: */
+  section#contactUs > div {
+    justify-content: center;
+    flex-direction: column;
+    height: 300px;
+  }
+
+  section#contactUs > div > div > div {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex: 1;
+    width: 420px;
+    padding: 10px 0;
+    margin: unset;
+    transition: 1s ease-in-out;
+  }
+
+  section#contactUs > div > div:hover {
+    flex: 1;
+    transform: unset;
+  }
+
+  section#contactUs > div > div a {
+    margin-right: 20px;
+  }
+
+  section#contactUs > p {
+    line-height: 17px;
+  }
+
+  /* Rodapé: */
+  footer {
+    height: 60px;
+  }
+
+  footer > p {
+    left: 3px;
+    bottom: 4px;
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  footer > p > a {
+    font-size: 17px;
+  }
+
+  footer > div > p {
+    font-size: 21px;
+    letter-spacing: 1px;
+  }
+}
+
+@media only screen and (max-width: 664px) {
+  /* Nossos Procedimentos */
+  div.service {
+    width: 70%;
+    height: 355px;
+  }
+
+  div.service > div > div {
+    height: 210px;
+  }
+
+  div.service > p {
+    font-size: 16px;
+    line-height: 18.5px;
+  }
+
+  div.service > div > div > a {
+    font-size: 80px;
+  }
+
+  div.service > ul {
+    line-height: 20px;
+  }
+
+  /* Procedimentos Estéticos: */
+  section#aesthetics > div:first-of-type > p {
+    line-height: 20px;
+    font-size: 18px;
+  }
+
+  section#aesthetics > div:last-of-type > div {
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  section#aesthetics > div:last-of-type > div > h1 {
+    margin: unset;
+    margin-bottom: 8px;
+  }
+
+  section#aesthetics > div:last-of-type > div p {
+    display: block;
+    margin-top: unset;
+    max-width: 100%;
+    display: none;
+    margin: unset;
+  }
+
+  section#aesthetics > div:last-of-type > div:last-of-type > div {
+    width: 100%;
+    margin: unset;
+  }
+
+  section#aesthetics > div:last-of-type > div ul {
+    margin: unset;
+    display: none;
+  }
+
+  /* Quem somos: */
+  section#aboutUs img#cornerBottom,
+  section#aboutUs img#cornerTop {
+    width: 60px;
+  }
+
+  /* Doutora: */
+  section#aboutUs > div#aboutDoctor {
+    padding: 0 30px;
+  }
+
+  /* Rodapé: */
+  footer > div > p {
+    font-size: 20px;
+    letter-spacing: unset;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  /* Principal: */
+  main {
+    min-height: 550px;
+    max-height: 1000px;
+  }
+
+  /* Home: */
+  div#leftDiv {
+    flex: 4;
+    clip-path: polygon(0 0, 100% 0%, 100% 73%, 0% 100%);
+  }
+
+  div#leftDiv:hover {
+    flex: 4;
+  }
+
+  div#rightDiv {
+    height: unset;
+    width: 100%;
+    flex: 6;
+    padding-top: 15px;
+  }
+
+  div#leftDiv > h1 {
+    font-size: 25px;
+    width: 100%;
+    left: 50%;
+  }
+
+  div#rightDiv > img {
+    width: 180px;
+  }
+
+  div#rightDiv > h1 {
+    font-size: 45px;
+    margin-top: 5px;
+  }
+
+  div#rightDiv > h2 {
+    font-size: 16px;
+  }
+
+  /* Nossos Procedimentos */
+  div.service {
+    width: 70%;
+    height: 355px;
+  }
+
+  /* Quem somos: */
+  section#aboutUs {
+    padding: 20px 30px 25px 30px;
+  }
+
+  section#aboutUs div#aboutLogo img {
+    width: 60px;
+  }
+
+  section#aboutUs > div#aboutBottom div#newDiv2 {
+    padding: 25px 10px;
+    margin-top: 25px;
+  }
+
+  section#aboutUs p#logoParagraph {
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: unset;
+  }
+
+  /* Doutora: */
+  section#aboutUs > div#aboutDoctor {
+    padding: 0 20px;
+  }
+
+  section#aboutUs > div#aboutDoctor > div:first-of-type {
+    height: 448px;
+    width: 308px;
+    margin-left: 10px;
+    margin-top: -40px;
+  }
+
+  section#aboutUs > div#aboutDoctor > div:last-of-type > h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+  }
+
+  /* Endereço: */
+  section#adress > div:last-of-type {
+    width: 250px;
+    height: 80px;
+    padding: 5px;
+    justify-content: space-between;
+  }
+
+  section#adress > div > p > i {
+    font-size: 16px;
+    margin-right: 3px;
+  }
+
+  section#adress > div > p {
+    font-size: 16px;
+    line-height: 15px;
+    text-align: center;
+  }
+
+  section#adress > div:last-of-type > div:last-of-type {
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  section#adress > div:last-of-type > div:last-of-type p {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  /* Contate-nos: */
+  section#contactUs {
+    padding-top: 20px;
+  }
+  span.boxMessage {
+    right: 10px;
+    bottom: 28px;
+  }
+
+  /* Rodapé: */
+  footer {
+    height: 70px;
+  }
+
+  footer > p {
+    left: unset;
+    bottom: 3px;
+    font-size: 14px;
+    line-height: 15px;
+    text-align: center;
+  }
+
+  footer > p > a {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  /* Cabeçalho: */
+  header {
+    height: 65px;
+  }
+
+  div#logoHeader > img {
+    height: 50px;
+  }
+
+  div#logoHeader > h1 {
+    line-height: 22px;
+    font-size: 20px;
+  }
+
+  header > div#openMenuBtn {
+    height: 50px;
+    width: 50px;
+    top: 7px;
+    right: 40px;
+    border-radius: 5px;
+    position: fixed;
+  }
+
+  /* Nossos Procedimentos: */
+  div.service {
+    width: 85%;
+  }
+
+  /* Procedimentos estéticos: */
+  section#aesthetics > div:last-of-type {
+    height: 1000px;
+  }
+
+  /* Quem somos: */
+  section#aboutUs {
+    padding: 20px 20px 25px 20px;
+  }
+
+  div.btn {
+    width: 35px;
+    font-size: 1.8em;
+  }
+
+  div#balls {
+    bottom: 7px;
+  }
+
+  section#aboutUs > div#aboutBottom div#newDiv1 {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  section#aboutUs div#aboutLogo {
+    margin-right: 30px;
+  }
+
+  section#aboutUs div#aboutLogo img {
+    width: 50px;
+  }
+
+  section#aboutUs div#aboutLogo h1 {
+    letter-spacing: -10px;
+  }
+
+  section#aboutUs > div#aboutBottom div#videoContainer {
+    height: 450px;
+    width: 250px;
+  }
+
+  div#videoContainer::before {
+    top: 15px;
+    right: 40px;
+    width: 85%;
+    height: calc(100% - 10px);
+  }
+
+  div#videoContainer::after {
+    top: -15px;
+    left: 20px;
+    width: 95%;
+    height: calc(100% + 35px);
+  }
+
+  /* Doutora: */
+  section#aboutUs > div#aboutDoctor {
+    height: 920px;
+    padding: 0 15px;
+  }
+
+  section#aboutUs > div#aboutDoctor > div:last-of-type > h1 {
+    font-size: 26px;
+  }
+
+  /* Contate-nos */
+  section#contactUs > div > div > div {
+    margin-left: 25px;
+  }
+
+  section#contactUs > div > div a {
+    margin-right: 5px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  section#contactUs > div > div p {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  /* Contate-nos */
+  section#contactUs > div > div > div {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  h1.sectionTitle {
+    font-size: 35px;
+  }
+
+  /* Cabeçalho: */
+  header {
+    padding: 0 20px;
+  }
+
+  header > div#openMenuBtn {
+    right: 15px;
+  }
+
+  /* Home: */
+  div#leftDiv > h1 {
+    font-size: 20px;
+  }
+
+  div#rightDiv > h1 {
+    font-size: 38px;
+  }
+
+  div#rightDiv > h2 {
+    font-size: 18px;
+  }
+
+  /* Nossos Procedimentos: */
+  section#services {
+    padding: 15px;
+  }
+
+  div.service {
+    width: 100%;
+    height: 330px;
+  }
+
+  div.service > div > div {
+    height: 180px;
+  }
+
+  /* Procedimentos Estéticos: */
+  section#aesthetics > div:last-of-type {
+    height: 1200px;
+  }
+
+  section#aesthetics > div:first-of-type > p {
+    line-height: 20px;
+    font-size: 17px;
+    margin: 5px 10px 0 10px;
+  }
+
+  /* Quem somos: */
+  section#aboutUs div#aboutLogo {
+    margin-right: 15px;
+  }
+
+  section#aboutUs div#aboutLogo img {
+    width: 35px;
+  }
+
+  section#aboutUs div#aboutLogo h1 {
+    color: #fffceb;
+    font-size: 25px;
+    line-height: 0;
+    letter-spacing: -10px;
+  }
+
+  section#aboutUs > div#aboutBottom div#videoContainer {
+    height: 400px;
+    width: 230px;
+  }
+
+  div#videoContainer::before {
+    top: 10px;
+    right: 33px;
+    width: 85%;
+    height: 100%;
+  }
+
+  div#videoContainer::after {
+    top: -17px;
+    left: 15px;
+    width: 95%;
+    height: calc(100% + 20px);
+  }
+
+  section#aboutUs > div#aboutBottom div#newDiv2 {
+    padding: 15px 5px;
+    margin-top: 25px;
+  }
+
+  /* Doutora: */
+  section#aboutUs {
+    padding: 20px 15px 25px 15px;
+  }
+
+  section#aboutUs > div#aboutDoctor {
+    height: 850px;
+    padding: 0 10px;
+  }
+
+  section#aboutUs > div#aboutDoctor > div:first-of-type {
+    height: 335px;
+    width: 230px;
+    margin-left: 10px;
+    margin-top: -40px;
+  }
+
+  /* Endereço */
+  section#adress > div:last-of-type {
+    width: 200px;
+    height: 100px;
+  }
+
+  /* Contate-nos */
+  section#contactUs > div {
+    height: 250px;
+  }
+
+  section#contactUs > div > div > div {
+    margin-left: 15px;
+  }
+  section#contactUs > div > div a {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  section#contactUs > div > div p {
+    font-size: 15px;
+  }
+
+  section#contactUs > p {
+    margin: 0 10px;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  /* Cabeçalho: */
+  header > div#openMenuBtn {
+    height: 40px;
+    width: 40px;
+    top: 12px;
+    right: 15px;
+  }
+
+  header > div#openMenuBtn > i.fa-bars {
+    font-size: 30px;
+  }
+
+  /* Nossos Procedimentos: */
+  section#services h1.sectionTitle {
+    font-size: 25px;
+  }
+
+  /* Quem somos: */
+  section#aboutUs > div#aboutBottom div#videoContainer {
+    height: 360px;
+    width: 200px;
+  }
+
+  div#videoContainer::before {
+    right: 28px;
+    width: 80%;
+    height: 100%;
+    transform: skew(5deg);
+  }
+
+  div#videoContainer::after {
+    top: -13px;
+    left: 3px;
+    width: 95%;
+    height: calc(100% + 15px);
+    transform: skew(-3deg);
+  }
+
+  /* Doutora: */
+  section#aboutUs > div#aboutDoctor {
+    height: 950px;
+  }
+
+  /* Endereço: */
+  section#adress > div:last-of-type {
+    width: 150px;
+    height: 140px;
+  }
+
+  section#adress > div > p {
+    font-size: 15px;
+    line-height: 14px;
+  }
+
+  section#adress > div:last-of-type > div:last-of-type p {
+    text-align: center;
+    line-height: 15px;
+  }
+
+  /* Contate-nos: */
+  section#contactUs > div {
+    height: 280px;
+  }
+
+  section#contactUs > div > div * {
+    border: 1px solid transparent;
+  }
+  section#contactUs > div > div > div {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  section#contactUs > div > div a {
+    margin-right: unset;
+  }
+
+  /* Ícone fixo: */
+  a#btnWpp {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
   }
 }

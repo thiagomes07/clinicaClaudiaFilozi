@@ -19,14 +19,13 @@
 </head>
 
 <body>
-    <main>
+    <main id="start">
         <header>
-            <div id="logo">
+            <div id="logoHeader">
                 <img src="images/smallLogo.png" alt="Logotipo da Clínica">
                 <h1>Claudia <br> Filozi</h1>
             </div>
 
-            <i class="fa-solid fa-bars" alt="Botão para abrir menu"></i>
             <nav>
                 <ul>
                     <li><a href="#services">Procedimentos</a></li>
@@ -36,6 +35,8 @@
                     <li><i class="fa-solid fa-xmark" alt="Botão para fechar menu"></i></li>
                 </ul>
             </nav>
+
+            <div id="openMenuBtn"><i class="fa-solid fa-bars" alt="Botão para abrir menu"></i></div>
         </header>
 
         <div id="home">
@@ -264,12 +265,14 @@
             <div>
                 <img src="images/aestheticOthers.jpg" alt="Aplicação de enzima em corpo humano">
                 <h1>Outros</h1>
-                <ul>
-                    <li>Aceleradores Metabólicos</li>
-                    <li>Skinbooster</li>
-                    <li>Microagulhamento</li>
-                    <li>Jato de Plasma</li>
-                </ul>
+                <div>
+                    <ul>
+                        <li>Aceleradores Metabólicos</li>
+                        <li>Skinbooster</li>
+                        <li>Microagulhamento</li>
+                        <li>Jato de Plasma</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -278,50 +281,50 @@
         <div>
             <h1 class="sectionTitle">Quem Somos</h1>
         </div>
-        <div>
-            <div id="aboutLeft">
-                <div id="slide">
-                    <div id="images">
-                        <div id="back" class="btn"><i class="fa-solid fa-chevron-left"></i></div>
-                        <div id="next" class="btn"><i class="fa-solid fa-chevron-right"></i></div>
-                        <img class="img" id="imgSelected" src="images/clinicFront.jpg" alt="Fachada da clínica">
-                        <img class="img" src="images/clinicBottom.jpg" alt="Térreio da clínica">
-                        <img class="img" src="images/clinicTop.jpg" alt="Primeiro andar da clínica">
-                    </div>
-                    <div id="balls">
-                    </div>
+        <div id="aboutTop">
+            <img src="images/cornerAbout.png" id="cornerTop" alt="Imagem decorativa.">
+            <div id="slide">
+                <div id="images">
+                    <div id="back" class="btn"><i class="fa-solid fa-chevron-left"></i></div>
+                    <div id="next" class="btn"><i class="fa-solid fa-chevron-right"></i></div>
+                    <img class="img" id="imgSelected" src="images/clinicFront.jpg" alt="Fachada da clínica">
+                    <img class="img" src="images/clinicBottom.jpg" alt="Térreio da clínica">
+                    <img class="img" src="images/clinicTop.jpg" alt="Primeiro andar da clínica">
                 </div>
-                <div>
-                    <img src="images/mediumLogo.png" alt="Logotipo da Clínica com tamanho médio">
-                    <div>
-                        <h1>Clínica claudia Filozi</h1>
-                        <p>Saúde, beleza e bem-estar num sólugar!</p>
-                    </div>
+                <div id="balls">
                 </div>
             </div>
-            <div id="aboutRight">
+            <div id="aboutLogo">
+                <img src="images/mediumLogo.png" alt="Logotipo da Clínica com tamanho médio">
                 <div>
-                    <p>Bem-vindo(a) à nossa clínica de saúde, beleza e bem-estar, um refúgio tranquilo onde você
-                        encontrará equilíbrio e cuidado para o seu corpo e mente. Com uma atmosfera acolhedora e uma
-                        energia positiva, nossa clínica tem sido um ponto de transformação na vida de centenas de
-                        pacientes.</p>
-                    <p>Nossa equipe é liderada pela Doutora Claudia Filozi altamente experiente em diversas terapias,
-                        dedicada a oferecer tratamentos
-                        personalizados e resultados excepcionais. Combinando conhecimentos fisioterapêuticos avançados e
-                        uma
-                        abordagem holística, temos o compromisso de proporcionar o mais alto nível de
-                        atendimento aos nossos pacientes.</p>
-                    <p>Na clínica, buscamos criar um ambiente harmonioso, onde você se sinta acolhido(a) e apoiado(a) em
-                        sua jornada de saúde e bem-estar. Estamos ansiosos para recebê-lo(a) e fazer parte da sua
-                        transformação. Agende sua consulta e permita que nossa clínica melhore sua vida, assim como fez
-                        por tantas outras pessoas.</p>
-                </div>
-                <div id="videoContainer">
-                    <video src="images/clinicTour.mp4" autoplay muted loop controls></video>
+                    <h1>Clínica claudia Filozi</h1>
+                    <p id="logoParagraph">Saúde, beleza e bem-estar num só lugar!</p>
                 </div>
             </div>
         </div>
-        <div>
+        <div id="aboutBottom">
+            <div id="aboutTxt">
+                <p>Bem-vindo(a) à nossa clínica de saúde, beleza e bem-estar, um refúgio tranquilo onde você
+                    encontrará equilíbrio e cuidado para o seu corpo e mente. Com uma atmosfera acolhedora e uma
+                    energia positiva, nossa clínica tem sido um ponto de transformação na vida de centenas de
+                    pacientes.</p>
+                <p>Nossa equipe é liderada pela Doutora Claudia Filozi altamente experiente em diversas terapias,
+                    dedicada a oferecer tratamentos
+                    personalizados e resultados excepcionais. Combinando conhecimentos fisioterapêuticos avançados e
+                    uma
+                    abordagem holística, temos o compromisso de proporcionar o mais alto nível de
+                    atendimento aos nossos pacientes.</p>
+                <p>Na clínica, buscamos criar um ambiente harmonioso, onde você se sinta acolhido(a) e apoiado(a) em
+                    sua jornada de saúde e bem-estar. Estamos ansiosos para recebê-lo(a) e fazer parte da sua
+                    transformação. Agende sua consulta e permita que nossa clínica melhore sua vida, assim como fez
+                    por tantas outras pessoas.</p>
+            </div>
+            <div id="videoContainer">
+                <video src="images/clinicTour.mp4" autoplay muted loop controls></video>
+            </div>
+            <img src="images/cornerAbout.png" id="cornerBottom" alt="Imagem decorativa.">
+        </div>
+        <div id="aboutDoctor">
             <div>
                 <img src="images/claudiaFace.jpg" alt="Rosto da doutora Claudia">
             </div>
@@ -352,8 +355,8 @@
         <div>
             <p><i class="fa-solid fa-location-dot"></i>Avenida Elias Yasbek 1335, centro, Embu das Artes </p>
             <div>
-                <p>Sábado. 08:00 às 16:00</p>
                 <p>Seg á Sex. 07:30 às 19:00</p>
+                <p>Sábado. 08:00 às 16:00</p>
             </div>
         </div>
     </section>
@@ -392,8 +395,8 @@
             </div>
         </div>
         <p>
-            Agende já uma sessão em nossa clínica e deixe-nos cuidar de você, proporcionando paz, rejuvenescimento e
-            equilíbrio. Transforme sua vida hoje mesmo! Entre em contato conosco.</p>
+            Agende já uma sessão em nossa clínica e deixe-nos cuidar de você. Transforme sua vida hoje mesmo! Entre em
+            contato conosco.</p>
     </section>
 
     <footer>
@@ -405,9 +408,10 @@
         </div>
     </footer>
 
-    <a href="(11) 93410-7391" id="btnWpp" target="_blank" aria-label="Entrar em contato com a clínica pelo WhatsApp"
-        title="Enviar uma mensagem pelo WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
     <!-- Ícone fixo do WhatsApp -->
+    <a href="https://api.whatsapp.com/send?phone=5511934107391&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20sess%C3%A3o."
+        id="btnWpp" target="_blank" aria-label="Entrar em contato com a clínica pelo WhatsApp"
+        title="Enviar uma mensagem pelo WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
 
     <script src="scripts/script.js"></script> <!-- Arquivo JavaScript -->
 </body>
