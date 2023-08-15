@@ -13,7 +13,7 @@ ScrollReveal().reveal("section#aesthetics > div:last-of-type > div", {
   easing: "ease-in-out",
 });
 
-ScrollReveal().reveal("section#aboutUs div#aboutLeft", {
+ScrollReveal().reveal("section#aboutUs div#aboutTop", {
   duration: 2000,
   distance: "100%",
   delay: 100,
@@ -21,7 +21,7 @@ ScrollReveal().reveal("section#aboutUs div#aboutLeft", {
   easing: "ease-in-out",
 });
 
-ScrollReveal().reveal("section#aboutUs div#aboutRight", {
+ScrollReveal().reveal("section#aboutUs div#aboutBottom", {
   duration: 2000,
   distance: "100%",
   delay: 100,
@@ -29,7 +29,7 @@ ScrollReveal().reveal("section#aboutUs div#aboutRight", {
   easing: "ease-in-out",
 });
 
-ScrollReveal().reveal("section#aboutUs > div:last-of-type", {
+ScrollReveal().reveal("section#aboutUs > div#aboutDoctor", {
   duration: 1500,
   distance: "100px",
   easing: "cubic-bezier(0.5, -0.01, 0, 1.005)",
@@ -138,7 +138,8 @@ function resizeImg() {
 }
 
 /* Abrir menu em dispositivos móveis: */
-document.querySelector("nav > ul").addEventListener("click", () => {
+const navigation = document.querySelector("nav > ul")
+navigation.addEventListener("click", () => {
   openMenu(false);
 });
 
@@ -149,23 +150,23 @@ document
   });
 
 function openMenu(action) {
-  action
-    ? (document.querySelector("nav ul").style.top = "0px")
-    : (document.querySelector("nav ul").style.top = "-200px");
+  if (window.innerWidth <= 800) {
+    action
+      ? (navigation.style.top = "0px")
+      : (navigation.style.top = "-200px");
 
-  const menu = document.querySelector("nav ul");
+    if (action) {
+      let newLi = document.createElement("li");
+      let newLink = document.createElement("a");
+      let newText = document.createTextNode("Início");
 
-  if (action) {
-    let newLi = document.createElement("li");
-    let newLink = document.createElement("a");
-    let newText = document.createTextNode("Início");
-
-    newLink.appendChild(newText);
-    newLink.href = "#start";
-    newLi.appendChild(newLink);
-    menu.insertBefore(newLi, menu.childNodes[0]);
-  } else {
-    menu.removeChild(menu.childNodes[0]);
+      newLink.appendChild(newText);
+      newLink.href = "#start";
+      newLi.appendChild(newLink);
+      navigation.insertBefore(newLi, navigation.childNodes[0]);
+    } else {
+      navigation.removeChild(navigation.childNodes[0]);
+    }
   }
 }
 
@@ -559,9 +560,6 @@ function showParagraphs() {
 /* Remover quebra de linha da seção de procedimentos estéticos: */
 let removed = false;
 function removeBrAesthetic() {
-  const title1 = document.querySelector(
-    "section#aesthetics > div:last-of-type > div:nth-child(1) > h1"
-  );
   const title2 = document.querySelector(
     "section#aesthetics > div:last-of-type > div:nth-child(2) > h1"
   );
@@ -570,13 +568,11 @@ function removeBrAesthetic() {
   );
 
   if (!removed && window.innerWidth <= 664) {
-    title1.querySelector("br").remove();
     title2.querySelector("br").remove();
     title3.querySelector("br").remove();
 
     removed = true;
   } else if (removed && window.innerWidth > 664) {
-    title1.innerHTML = "Harmonização <br> Facial";
     title2.innerHTML = "Preenchimento <br> Labial";
     title3.innerHTML = "Gordura <br> Localizada";
 
@@ -752,7 +748,6 @@ let removedBrAuthor = false;
 function removeBrAuthor() {
   const author = document.querySelector("footer > p");
 
-  console.log("removeBrAuthor");
   if (!removedBrAuthor && window.innerWidth <= 570) {
     author.innerHTML =
       'por <a href="https://thiagomes07.github.io/myPortfolio/" target="_blank" title="Desenvolvedor deste site">Thiago Gomes</a>';

@@ -6,15 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Bem-vindo à Clínica Claudia Filozi - uma clínica de saúde, estética e bem-estar. Oferecemos tratamentos personalizados, resultados excepcionais e uma experiência transformadora. Temos uma equipe experiente, ambiente acolhedor e atendimento de alto nível. Agende sua consulta e melhore sua vida agora!">
-    <!-- Fazer a descrição da página -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!-- Biblioteca de animações -->
+    <link rel="stylesheet" href="styles/animate.css"/><!-- Biblioteca de animações -->
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/styleResponsive.css"> <!-- Estilo Responsivo. -->
     <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/c35ca0d4c2.js" crossorigin="anonymous"></script>
-    <!-- Biblioteca de Ícones -->
-    <script src="https://unpkg.com/scrollreveal"></script> <!-- Biblioteca de animações de surgimento de elementos -->
+    <script src="scripts/fontawesome.js"></script><!-- Biblioteca de Ícones -->
+    <script src="scripts/scrollreveal.js"></script> <!-- Biblioteca de animações de surgimento de elementos -->
     <title>Clínica Claudia Filozi</title>
 </head>
 
@@ -37,6 +34,11 @@
             </nav>
 
             <div id="openMenuBtn"><i class="fa-solid fa-bars" alt="Botão para abrir menu"></i></div>
+
+            <a href="blog.html" id="pageBtn" title="Postagens da clínica"
+                aria-label="Abrir página com as publicações da clínica">
+                <p>Blog</p>
+            </a>
         </header>
 
         <div id="home">
@@ -125,7 +127,7 @@
             <div class="service">
                 <div>
                     <div>
-                        <img src="images/PilatesSmall.jpg" alt="Pilates">
+                        <img src="images/pilatesSmall.jpg" alt="Pilates">
                         <a href="https://api.whatsapp.com/send?phone=5511934107391&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Pilates."
                             target="_blank" aria-label="Enviar mensagem ao WhatsApp da Clínica"
                             title="Enviar mensagem ao WhatsApp"><i class="fa-brands fa-whatsapp"></i>
@@ -228,11 +230,9 @@
         </div>
         <div>
             <div>
-                <img src="images/facialHarmonization.jpg" alt="Harmonização Facial">
-                <h1>Harmonização <br> Facial</h1>
-                <p>Equilibre e realce sua aparência com resultados naturais, suavizando rugas, definindo contornos e
-                    corrigindo assimetrias. Confie em um procedimento personalizado e seguro para se sentir mais
-                    confiante e confortável em sua pele.</p>
+                <img src="images/botox.jpg" alt="Botox">
+                <h1>Botox</h1>
+                <p>Em busca de uma pele mais jovem e revitalizada? O Botox é a solução para rugas dinâmicas e uma aparência renovada. Oferecemos a aplicação precisa da toxina botulínica, proporcionando resultados naturais e duradouros.</p>
             </div>
             <div>
                 <img src="images/lipFiller.jpg" alt="Preenchimento Labial">
@@ -249,11 +249,9 @@
                     duradouros.</p>
             </div>
             <div>
-                <img src="images/skinLaxity.jpg" alt="Corpo Flácido">
-                <h1>Flacidez</h1>
-                <p>Reduza a flacidez corporal e conquiste uma pele mais firme com nosso avançado tratamento de enzimas.
-                    A mesoterapia estimula o colágeno e a elastina, rejuvenescendo a pele, e proporcionando confiança
-                    com um corpo mais firme.</p>
+                <img src="images/skinSpots.jpg" alt="Manchas Faciais">
+                <h1>Manchas</h1>
+                <p>Experimente este tratamento e desfrute de uma pele sem manchas! Em nossa clínica, oferecemos tratamentos personalizados, venha, e diga adeus às manchas faciais e corporais. </p>
             </div>
             <div>
                 <img src="images/localizedFat.jpg" alt="Gordura Loclizada">
@@ -403,7 +401,7 @@
         <p>por<br><a href="https://thiagomes07.github.io/myPortfolio/" target="_blank"
                 title="Desenvolvedor deste site">Thiago Gomes</a></p>
         <div>
-            <img src="images/smallerLogo.png" alt="">
+            <img src="images/smallerLogo.png" alt="Logotipo da clínica com um tamanho pequeno">
             <p>Clínica Claudia Filozi</p>
         </div>
     </footer>

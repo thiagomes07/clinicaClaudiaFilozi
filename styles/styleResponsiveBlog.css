@@ -1,0 +1,318 @@
+@charset "UTF-8";
+
+@media only screen and (max-width: 1500px) {
+  div#post {
+    margin: 20px 0;
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  /* Cabeçalho: */
+  header {
+    padding: 0 30px;
+    height: 80px;
+  }
+
+  div#logoHeader > img {
+    height: 65px;
+  }
+
+  div#logoHeader > h1 {
+    line-height: 25px;
+    font-size: 22px;
+  }
+
+  /* Lista de posts: */
+  main > a.posts > h2 {
+    font-family: "cocoGooseRegular";
+    font-size: 20px;
+    margin-left: 20px;
+  }
+
+  /* Post: */
+  div#post div#imgStyle::before {
+    height: 92%;
+  }
+
+  div#post div#imgStyle::after {
+    height: 82%;
+  }
+
+  /* Botão WhatsApp: */
+  a#btnWpp {
+    width: 60px;
+    height: 60px;
+    font-size: 34px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* Lista de posts: */
+  main {
+    background-image: url("../images/backgroundBlogSmall.svg");
+  }
+
+  /* Post: */
+  div#post div#imgStyle {
+    top: -1%;
+    width: 95%;
+  }
+
+  div#post div#imgStyle::before {
+    top: -1%;
+    height: 94%;
+  }
+
+  div#post div#imgStyle::after {
+    top: 3%;
+    height: 84%;
+  }
+
+  /* Rodapé: */
+  footer {
+    height: 60px;
+  }
+
+  footer > p {
+    left: 3px;
+    bottom: 4px;
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  footer > div > p {
+    font-size: 21px;
+    letter-spacing: 1px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  /* Cabeçalho: */
+  header > a#pageBtn {
+    width: 180px;
+    height: 40px;
+    bottom: -38px;
+    left: -2px;
+    padding-right: 10px;
+    border-bottom-right-radius: 30px;
+  }
+
+  header > a#pageBtn:hover {
+    width: 190px;
+  }
+
+  header > a#pageBtn > p {
+    font-size: 19px;
+  }
+
+  /* Lista de posts: */
+  main {
+    padding: 40px 20px;
+  }
+
+  main > h1 {
+    font-size: 40px;
+    font-family: "cocogooseSemiBold";
+    margin-bottom: 30px;
+  }
+
+  main > a.posts > h2 {
+    font-family: "cocoGooseRegular";
+    font-size: 17px;
+    margin-left: 15px;
+  }
+
+  main > a.posts > div.fadeImg > img {
+    width: 100%;
+  }
+
+  main > a.posts > div.fadeImg {
+    width: 200px;
+  }
+
+  /* Post: */
+  div#post {
+    margin: unset;
+    padding: 10px 30px;
+  }
+
+  div#post h1 {
+    font-size: 27px;
+  }
+
+  div#post h2 {
+    font-size: 23px;
+  }
+
+  div#post ul h2 {
+    font-size: 18px;
+  }
+
+  div#post div#imgStyle::before {
+    height: 92%;
+  }
+
+  div#post div#imgStyle::after {
+    height: 82%;
+  }
+
+  /* Rodapé: */
+  footer {
+    height: 70px;
+  }
+
+  footer > p {
+    left: unset;
+    bottom: 3px;
+    font-size: 14px;
+    line-height: 15px;
+    text-align: center;
+  }
+
+  footer > p > a {
+    font-size: 14px;
+  }
+
+  footer > div > p {
+    font-size: 20px;
+    letter-spacing: unset;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  /* Cabeçalho: */
+  header {
+    height: 65px;
+    padding: 0 20px;
+  }
+
+  div#logoHeader > img {
+    height: 50px;
+  }
+
+  div#logoHeader > h1 {
+    line-height: 22px;
+    font-size: 20px;
+  }
+
+  /* Lista de posts: */
+  main {
+    padding: 50px 15px 20px 15px;
+  }
+
+  main > h1 {
+    font-size: 40px;
+    font-family: "cocogooseSemiBold";
+    margin-bottom: 15px;
+  }
+
+  main > a.posts {
+    height: 80px;
+  }
+
+  main > a.posts:not(a.posts:last-of-type) {
+    margin-bottom: 20px;
+  }
+
+  main > a.posts > h2 {
+    font-family: "poppinsRegular";
+    font-size: 17px;
+    line-height: 19px;
+    margin-left: 10px;
+  }
+
+  main > a.posts > div.fadeImg {
+    width: 150px;
+  }
+
+  /* Post: */
+  div#post {
+    margin: unset;
+    padding: 12px 18px;
+  }
+
+  div#post div#imgStyle::before {
+    height: 90%;
+  }
+
+  div#post div#imgStyle::after {
+    height: 80%;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  /* Lista de posts: */
+  main > a.posts {
+    height: 70px;
+  }
+
+  main > a.posts::after {
+    border-top-left-radius: 20px;
+  }
+
+  main > a.posts > h2 {
+    font-size: 15px;
+    line-height: 17px;
+  }
+
+  main > a.posts > div.fadeImg {
+    width: 120px;
+  }
+
+  /* Post: */
+  div#post {
+    margin: unset;
+    padding: 10px 13px;
+  }
+
+  div#post h1 {
+    font-size: 24px;
+  }
+
+  div#post h2 {
+    font-size: 20px;
+  }
+
+  div#post ul h2 {
+    font-size: 17px;
+  }
+
+  div#post div#imgStyle::before {
+    top: -1%;
+    height: 85%;
+  }
+
+  div#post div#imgStyle::after {
+    top: 0;
+    height: 78%;
+  }
+}
+
+@media only screen and (max-width: 295px) {
+  /* Rodapé: */
+  footer {
+    height: 70px;
+    padding-top: 5px;
+    align-items: flex-start;
+  }
+
+  footer > div > img {
+    margin-left: 5px;
+    margin-right: unset;
+    width: 38px;
+  }
+
+  footer > div > p {
+    font-size: 18px;
+    letter-spacing: 0;
+  }
+
+  /* Botão WhatsApp: */
+  a#btnWpp {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+  }
+}
