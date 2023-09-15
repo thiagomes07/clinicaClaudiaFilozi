@@ -965,7 +965,7 @@ section#contactUs > div > div:hover {
   transform: translateY(-10px);
 }
 
-section#contactUs > div > div a {
+section#contactUs > div > div a.testBtn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -991,6 +991,11 @@ section#contactUs > div > div p {
   font-size: 30px;
   white-space: nowrap;
   font-family: "poppinsSemiBold";
+}
+
+section#contactUs > div > div p a{
+  color: #111110;
+  text-decoration: none;
 }
 
 section#contactUs > div > div p > i {

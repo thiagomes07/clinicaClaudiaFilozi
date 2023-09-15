@@ -55,6 +55,33 @@ ScrollReveal().reveal("section#contactUs > p", {
   easing: "ease-in-out",
 });
 
+/* Animações: */
+const animateCSS = (element, animation, prefix = "animate__") =>
+  // We create a Promise and return it
+  new Promise((resolve) => {
+    const animationName = `${prefix}${animation}`;
+    const node = document.querySelector(element);
+
+    node.classList.add(`${prefix}animated`, animationName);
+
+    // When the animation ends, we clean the classes and resolve the Promise
+    function handleAnimationEnd(event) {
+      event.stopPropagation();
+      node.classList.remove(`${prefix}animated`, animationName);
+      resolve("Animation ended");
+    }
+
+    node.addEventListener("animationend", handleAnimationEnd, { once: true });
+  });
+
+setInterval(() => {
+  animateCSS("a#btnWpp", "tada");
+}, 10000);
+
+document.querySelector("footer > p").addEventListener("mouseover", () => {
+  animateCSS("footer > p", "rubberBand");
+});
+
 /* Troca de imagens da tela Home */
 document.addEventListener("DOMContentLoaded", () => {
   let images = [
@@ -138,7 +165,7 @@ function resizeImg() {
 }
 
 /* Abrir menu em dispositivos móveis: */
-const navigation = document.querySelector("nav > ul")
+const navigation = document.querySelector("nav > ul");
 navigation.addEventListener("click", () => {
   openMenu(false);
 });
@@ -151,9 +178,7 @@ document
 
 function openMenu(action) {
   if (window.innerWidth <= 800) {
-    action
-      ? (navigation.style.top = "0px")
-      : (navigation.style.top = "-200px");
+    action ? (navigation.style.top = "0px") : (navigation.style.top = "-200px");
 
     if (action) {
       let newLi = document.createElement("li");
@@ -665,8 +690,8 @@ function expandContact() {
     divContact.forEach(function (contact, divIndex) {
       contact.addEventListener("click", () => {
         if (window.innerWidth <= 800) {
-          let dynamicProperty = `div${divIndex}`;
-          let contactDiv = contact.querySelector("div");
+          const dynamicProperty = `div${divIndex}`;
+          const contactDiv = contact.querySelector("div");
 
           Object.entries(clickCount).forEach(([key], index) => {
             const ctc = document.querySelector(
@@ -680,6 +705,10 @@ function expandContact() {
           });
 
           if (!clickCount[dynamicProperty]) {
+            animateCSS(
+              `section#contactUs > div > div:nth-child(${divIndex + 1}) a `,
+              "bounce"
+            );
             window.innerWidth > 395
               ? (contactDiv.style.transform = "translateX(20px)")
               : (contactDiv.style.transform = "translateX(10px)");
@@ -735,8 +764,10 @@ function breakBtnWpp() {
     const distanceToBottom = pageHeight - (scrollPosition + windowHeight);
     if (!exec && distanceToBottom <= 40) {
       btnWpp.style.bottom = "80px";
+      animateCSS("a#btnWpp", "flip");
       exec = true;
     } else if (exec && distanceToBottom > 40) {
+      animateCSS("a#btnWpp", "flip");
       btnWpp.style.removeProperty("bottom");
       exec = false;
     }

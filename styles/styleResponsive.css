@@ -186,7 +186,7 @@
     padding: 30px;
   }
 
-  section#contactUs > div > div a {
+  section#contactUs > div > div a.testBtn {
     width: 70px;
     height: 70px;
     font-size: 27px;
@@ -421,7 +421,7 @@
     padding: 25px;
   }
 
-  section#contactUs > div > div a {
+  section#contactUs > div > div a.testBtn {
     width: 60px;
     height: 60px;
     font-size: 24px;
@@ -818,7 +818,7 @@
   section#aboutUs div#aboutLogo h1 {
     color: #fffceb;
     font-size: 27px;
-    line-height: 27px;
+    line-height: 30px;
     letter-spacing: -8px;
     text-transform: uppercase;
     font-family: "cocogooseBold";
@@ -932,7 +932,7 @@
     transform: unset;
   }
 
-  section#contactUs > div > div a {
+  section#contactUs > div > div a.testBtn {
     margin-right: 20px;
   }
 
@@ -1259,7 +1259,7 @@
   }
 
   section#aboutUs div#aboutLogo h1 {
-    letter-spacing: -10px;
+    letter-spacing: -5px;
   }
 
   div#videoContainer::before {
@@ -1296,7 +1296,7 @@
     margin-left: 25px;
   }
 
-  section#contactUs > div > div a {
+  section#contactUs > div > div a.testBtn {
     margin-right: 5px;
     width: 50px;
     height: 50px;
@@ -1438,7 +1438,8 @@
   section#contactUs > div > div > div {
     margin-left: 15px;
   }
-  section#contactUs > div > div a {
+
+  section#contactUs > div > div a.testBtn {
     width: 40px;
     height: 40px;
     font-size: 18px;
@@ -1526,7 +1527,7 @@
     justify-content: center;
   }
 
-  section#contactUs > div > div a {
+  section#contactUs > div > div a.testBtn {
     margin-right: unset;
   }
 
