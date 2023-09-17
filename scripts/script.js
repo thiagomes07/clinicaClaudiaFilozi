@@ -76,7 +76,7 @@ const animateCSS = (element, animation, prefix = "animate__") =>
 
 setInterval(() => {
   animateCSS("a#btnWpp", "tada");
-}, 10000);
+}, 7000);
 
 document.querySelector("footer > p").addEventListener("mouseover", () => {
   animateCSS("footer > p", "rubberBand");
